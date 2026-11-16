@@ -1,0 +1,269 @@
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #fffbea;
+    color: #222;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+header, nav, .navbar {
+    width: 100%;
+    background-color: #fffc00;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0e900;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+    font-size: 27px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+h1::before {
+    content: "👻";
+    font-size: 27px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #777000;
+}
+
+nav a, .navbar a {
+    margin: 0 12px;
+}
+
+nav a:hover, .navbar a:hover {
+    color: #777000;
+    text-decoration: none;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main, .container, section, .card {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0e9b5;
+}
+
+/* CARTÃO DE LOGIN E CADASTRO */
+.auth-card {
+    max-width: 450px;
+    text-align: center;
+    padding: 35px;
+    border-top: 6px solid #fffc00;
+    border-radius: 16px;
+}
+
+.auth-card h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIOS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+/* RÓTULOS */
+label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+    text-align: left;
+}
+
+/* CAMPOS DE PREENCHIMENTO */
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e6d900;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 252, 0, 0.25);
+}
+
+/* BOTÕES */
+button, input[type="submit"] {
+    background-color: #222;
+    color: #fffc00;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin: 10px auto 0;
+    display: block;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #fffc00;
+    color: #222;
+    transform: translateY(-2px);
+}
+
+/* BOTÃO DE EDIÇÃO */
+.btn-edit {
+    background-color: #fffc00;
+    color: #222;
+    width: auto;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0;
+}
+
+.btn-edit:hover {
+    background-color: #e6df00;
+}
+
+/* BOTÃO DESABILITADO */
+.btn-disabled {
+    background-color: #ddd !important;
+    color: #777 !important;
+    cursor: not-allowed;
+    width: auto;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0;
+}
+
+/* PESQUISA */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.search-box button {
+    width: auto;
+    margin: 0;
+}
+
+/* TABELAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #fffc00;
+    color: #222;
+    font-weight: 700;
+}
+
+td {
+    color: #333;
+    background-color: #fff;
+}
+
+tr:hover td {
+    background-color: #fffbea;
+}
+
+td button {
+    font-size: 13px;
+    padding: 8px 12px;
+    width: auto;
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    main, .container, section, .card {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    header, nav, .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "sobrenome": "Snap",
+      "cpf": "02030405060",
+      "telefone": "11999999997",
+      "email": "admin@admin",
+      "senha": "1234567",
+      "rua": "Av. João",
+      "cep": "00000-000",
+      "cidade": "Guarulhos",
+      "estado": "SP",
+      "isAdmin": true
+    },
+    {
+      "nome": "Pedro",
+      "sobrenome": "Mangueira",
+      "cpf": "109809283",
+      "telefone": "110128234",
+      "email": "jamaiquis@gmail.com",
+      "senha": "0606",
+      "rua": "Casa do yuri",
+      "cep": "0018713214",
+      "cidade": "Bras Cubas",
+      "estado": "SP",
+      "isAdmin": false,
+      "id": "KSOqMIQ"
+    },
+    {
+      "nome": "Brunoooo",
+      "sobrenome": "?",
+      "cpf": "0982819313",
+      "telefone": "119173823",
+      "email": "bruno@gmail.com",
+      "senha": "4444",
+      "rua": "João Machado",
+      "cep": "092833",
+      "cidade": "Jundiastreva",
+      "estado": "SP",
+      "isAdmin": false,
+      "id": "jESW2JU"
+    }
+  ]
+}
